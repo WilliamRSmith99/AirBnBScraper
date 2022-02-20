@@ -1,0 +1,22 @@
+import pymongo
+from pymongo import MongoClient
+
+cluster = MongoClient("mongodb+srv://Will:zRWcpj4gaew9bd3@cluster0.eawjg.mongodb.net/AirBnB-Scraper?retryWrites=true&w=majority")
+db = cluster["AirBnB-Scraper"]
+collection = db["Listing"]
+
+post = {"_id": 0 ,
+        'Name': 'Head to the Grand Ole Opry from a Relaxing Garden Apartment',
+        'Type': 'Entire residential home in Nashville',
+        'Capacity': '1 bedroom 1 bath,',
+        'Features': 'Free parking · Wifi · Kitchen · Self check - in',
+        'URL': 'www.airbnb.com/rooms/plus/8497631?previous_page_section_name=1000&federated_search_id=8845e7a5-432a-44fa-9904-149bad2cf1e8 ',
+        'img': 'https://a0.muscache.com/im/pictures/1d2cffe9-8df9-4e71-9be0-0830b39d3790.jpg?im_w=720'
+
+}
+
+
+
+
+
+results = collection.delete_many({})
